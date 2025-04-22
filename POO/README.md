@@ -1,18 +1,142 @@
-## Getting Started
+# 📱 Projeto iPhone - DIO - Trilha Java Básico
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto é parte do desafio proposto na Trilha de Java Básico da [DIO](https://www.dio.me/), com o objetivo de praticar conceitos de Programação Orientada a Objetos (POO) através da modelagem e implementação de um componente iPhone com suas funcionalidades principais.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 📚 Funcionalidades Modeladas
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+O iPhone foi modelado com base em três grandes funcionalidades, cada uma representada por uma interface:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- 🎵 **Reprodutor Musical**
+  - `tocar()`
+  - `pausar()`
+  - `selecionarMusica(String musica)`
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- 📞 **Aparelho Telefônico**
+  - `ligar(String numero)`
+  - `atender()`
+  - `iniciarCorreioVoz()`
 
-## Dependency Management
+- 🌐 **Navegador na Internet**
+  - `exibirPagina(String url)`
+  - `adicionarNovaAba()`
+  - `atualizarPagina()`
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+A classe `iPhone` implementa todas essas interfaces, simulando as funcionalidades principais do dispositivo.
+
+---
+
+## 🧩 Diagrama UML (Mermaid)
+
+```mermaid
+classDiagram
+    class ReprodutorMusical {
+        <<interface>>
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+    }
+
+    class AparelhoTelefonico {
+        <<interface>>
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    class NavegadorInternet {
+        <<interface>>
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    class iPhone {
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    iPhone --|> ReprodutorMusical
+    iPhone --|> AparelhoTelefonico
+    iPhone --|> NavegadorInternet
+
+```
+
+---
+
+## 📂 Estrutura de Código
+
+A seguir, a implementação completa das interfaces e da classe `iPhone`, conforme o desafio proposto.
+
+---
+
+```java
+public interface ReprodutorMusical {
+    void tocar();
+    void pausar();
+    void selecionarMusica(String musica);
+}
+
+public interface AparelhoTelefonico {
+    void ligar(String numero);
+    void atender();
+    void iniciarCorreioVoz();
+}
+
+public interface NavegadorInternet {
+    void exibirPagina(String url);
+    void adicionarNovaAba();
+    void atualizarPagina();
+}
+
+public class iPhone implements ReprodutorMusical, AparelhoTelefonico, NavegadorInternet {
+
+    // ReprodutorMusical
+    public void tocar() {
+        System.out.println("Tocando música...");
+    }
+
+    public void pausar() {
+        System.out.println("Música pausada.");
+    }
+
+    public void selecionarMusica(String musica) {
+        System.out.println("Selecionando a música: " + musica);
+    }
+
+    // AparelhoTelefonico
+    public void ligar(String numero) {
+        System.out.println("Ligando para: " + numero);
+    }
+
+    public void atender() {
+        System.out.println("Atendendo chamada...");
+    }
+
+    public void iniciarCorreioVoz() {
+        System.out.println("Iniciando correio de voz...");
+    }
+
+    // NavegadorInternet
+    public void exibirPagina(String url) {
+        System.out.println("Exibindo página: " + url);
+    }
+
+    public void adicionarNovaAba() {
+        System.out.println("Nova aba adicionada.");
+    }
+
+    public void atualizarPagina() {
+        System.out.println("Atualizando a página...");
+    }
+}
+
+```
