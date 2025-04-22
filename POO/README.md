@@ -74,7 +74,7 @@ classDiagram
 
 ## 📂 Estrutura de Código
 
-A seguir, a implementação completa das interfaces e da classe `iPhone`, conforme o desafio proposto.
+A seguir, a implementação das interfaces e da classe `iPhone`, conforme o desafio proposto.
 
 ---
 
