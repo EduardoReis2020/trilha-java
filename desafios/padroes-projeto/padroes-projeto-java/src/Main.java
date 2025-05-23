@@ -1,5 +1,3 @@
-package designs;
-
 import designs.facade.Facade;
 import designs.singleton.SingletonEager;
 import designs.singleton.SingletonLazy;
@@ -10,7 +8,7 @@ import designs.strategy.ComportamentoDefensivo;
 import designs.strategy.ComportamentoNormal;
 import designs.strategy.Robo;
 
-public class Test {
+public class Main {
     public static void main(String[] args) {
         // Testando os Singletons
         // SingletonLazy
