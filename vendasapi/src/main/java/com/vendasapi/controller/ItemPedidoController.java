@@ -7,12 +7,14 @@ import com.vendasapi.domain.model.ItemPedido;
 import com.vendasapi.service.ItemPedidoService;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/itens-pedido")
+@Tag(name = "ItemPedido", description = "Gerenciamento de itens de pedido")
 public class ItemPedidoController {
 
     @Autowired

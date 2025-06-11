@@ -1,9 +1,8 @@
 package com.vendasapi.domain.repository;
 
+import com.vendasapi.domain.model.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.vendasapi.domain.model.Cliente;
-
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente, Long> {}
+public interface CategoriaRepository extends JpaRepository<Categoria, Long> {}

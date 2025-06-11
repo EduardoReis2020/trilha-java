@@ -7,12 +7,14 @@ import com.vendasapi.domain.model.Produto;
 import com.vendasapi.service.ProdutoService;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/produtos")
+@Tag(name = "Produto", description = "API para gerenciamento de produtos")
 public class ProdutoController {
 
     @Autowired

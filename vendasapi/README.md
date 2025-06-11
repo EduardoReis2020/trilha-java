@@ -8,7 +8,7 @@ classDiagram
     +String nome
     +String descricao
     +BigDecimal preco
-    +int quantidadeEstoque
+    +int estoque
     +Categoria categoria
   }
 
@@ -20,9 +20,9 @@ classDiagram
   class Cliente {
     +Long id
     +String nome
-    +String email
-    +String senha
-    +String endereco
+    +String email 
+    +String senha 
+    +String endereco 
     +String telefone
   }
 
@@ -38,7 +38,7 @@ classDiagram
     +Cliente cliente
     +List~ItemPedido~ itens
     +PedidoStatus status
-    +LocalDateTime dataCriacao
+    +LocalDateTime dataPedido
     +BigDecimal valorTotal
   }
 
@@ -49,10 +49,10 @@ classDiagram
     +BigDecimal precoUnitario
   }
 
-  class PedidoStatus {
+  class StatusPedido {
     <<enumeration>>
-    CRIADO
-    EM_PREPARACAO
+    PENDENTE
+    CONFIRMADO
     ENTREGUE
     CANCELADO
   }
@@ -66,7 +66,7 @@ classDiagram
   Pedido --> "1..*" ItemPedido : contém
   ItemPedido --> Produto : refere-se a
 
-  Pedido --> PedidoStatus : tem
+  Pedido --> StatusPedido : tem
 
   note for Produto "Manipulado apenas por Administrador"
 
