@@ -1,0 +1,15 @@
+spring.application.name=vendasapi
+
+# Variáveis do banco de dados (Railway)
+spring.datasource.url=${PGURL}
+spring.datasource.username=${PGUSER}
+spring.datasource.password=${PGPASSWORD}
+
+# JPA / Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+# Porta padrão
+server.port=8080
