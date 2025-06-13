@@ -42,22 +42,20 @@ Tecnologias principais:
 
 src/
 └── main/
-    ├── java/
-    │   └── com.vendasapi/
-    │       ├── controller/
-    │       ├── domain/
-    │       │   ├── enums/
-    │       │   ├── model/
-    │       │   └── repository/
-    │       ├── service/
-    │       ├── SecurityConfig
-    │       └── VendasapiApplication(Main)
-    └── resources/
-        ├── application.properties
-        └── static/ e templates/ (se necessário futuramente)
-
-
----
+├── java/
+│   └── com/vendasapi/
+│   ├── controller/
+│   ├── domain/
+│   │   ├── enums/
+│   │   ├── model/
+│   │   └── repository/
+│   ├── service/
+│   ├── SecurityConfig.java
+│   └── VendasapiApplication.java (Main)
+└── resources/
+├── application.properties
+└── static/ (se necessário futuramente)
+└── templates/ (se necessário futuramente)
 
 ## 📦 Modelos de Domínio
 
@@ -300,7 +298,6 @@ Altere para `create` se quiser forçar a recriação a cada execução (apenas e
 spring.jpa.hibernate.ddl-auto=create
 ```
 ## 👨‍💻 Autor
-Eduardo dos Reis Souza
-Engenheiro de Computação | Desenvolvedor Backend Java
+Desenvolvido por [Eduardo dos Reis Souza](https://github.com/EduardoReis2020) 
 
----
+🔗 Repositório: [vendasapi](https://github.com/EduardoReis2020/trilha-java/tree/main/vendasapi)
